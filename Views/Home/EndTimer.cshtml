@@ -1,0 +1,15 @@
+﻿<div>
+     @{
+            var endTime = DateTime.Today.ToString("h:mm tt");
+        }
+    Time : @endTime
+</div>
+
+
+<form method="post" id="timerForm" asp-controller="Home" asp-action="EndTimer">       
+    <div>
+        <button asp-action="EndTimer" asp-controller="Home" asp-route-endTime="@endTime">
+            End
+        </button>
+    </div>
+</form>

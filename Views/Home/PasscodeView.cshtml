@@ -1,0 +1,13 @@
+﻿@model Employee
+
+<form method="post" id="timerForm" asp-controller="Home" asp-action="PasscodeView">
+    <div>
+        <div>Passcode</div>
+
+        <div>
+              <input asp-for="Passcode "name="Passcode" id="passcode" type="text" placeholder="Enter Passcode" />
+        </div>
+
+        <button asp-controller="Home" asp-action="PasscodeView" style="background-color:blue">Enter</button>
+    </div>
+</form>

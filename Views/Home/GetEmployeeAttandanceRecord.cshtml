@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+
+<div class="table-responsive" style="color: #828282;">
+
+
+        <table id="donation-table" class="table table-striped  table-hover bg-light">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Date_Stamp</th>
+                    <th>Name</th>
+                    <th>ClockIn</th>
+                    <th>ClockOut</th>
+                
+
+                </tr>
+            </thead>
+            <tbody>
+
+              @{
+                    int i = 1;
+                }
+ 
+        @foreach (var attendance in Model)
+        {
+            <tr>
+
+                <td class="text-truncate">@(i++)</td>
+                <td class="text-truncate">@attendance.Date_Stamp</td>
+                <td class="text-truncate">@attendance.Name</td>
+                <td class="text-truncate">@attendance.ClockInTime</td>
+                <td class="text-truncate">@attendance.ClockOutTime</td>
+             
+            </tr>
+         }
+
+            </tbody>
+        </table>

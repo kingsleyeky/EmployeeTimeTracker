@@ -1,0 +1,15 @@
+﻿    <div>
+        @{
+            var currentTime = DateTime.Today.ToString("h:mm tt");
+        }
+         Time: @currentTime        
+    </div>
+
+    <div>
+        <form method="post" id="timerForm" asp-controller="Home" asp-action="StartTimer">
+
+            <button asp-action="StartTimer" asp-controller="Home" asp-route-currentTime="@currentTime">
+                Start
+            </button>
+        </form>
+    </div>
